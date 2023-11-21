@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image
 
 # Load the model
-model = pickle.load(open('model/final_model.sav', 'rb'))
+model = pickle.load(open('../model/final_model.sav', 'rb'))
 
 @st.cache_data
 def convert_df(df):
@@ -13,7 +13,7 @@ def convert_df(df):
 
 def main():
     # Load picture
-    image_hospital = Image.open('img/hospital.jpg')
+    image_hospital = Image.open('../img/hospital.jpg')
 
     # Add option to select online or offline prediction
     add_selectbox = st.sidebar.selectbox(
