@@ -45,7 +45,7 @@ def main():
         diabetesPedigreeFunction = st.number_input(
             'Diabetes Pedigree Function', min_value=0, max_value=3)
         age = st.number_input(
-            'Age', min_value=0, max_value=100)
+            'Age', min_value=0, max_value=100)  
     
         # Convert form to data frame
         input_df = pd.DataFrame([
@@ -97,6 +97,7 @@ def main():
                 'Age'
                 ]
             ]
+
 
             # Make predictions
             data['Prediction'] = np.where(model.predict(data)==1, 'Diabetic', 'Non Diabetic')
